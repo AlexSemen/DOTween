@@ -13,12 +13,21 @@ public class TextScript : MonoBehaviour
     private int _delay;
     private int _timeChange;
     private int _timeChangeColor;
+    private int quantityRepetitions;
+    private bool _isWork;
+    private string _defaultText;
+    private Color _defaultColor;
 
     private void Awake()
     {
         _delay = 3;
         _timeChange = 2;
         _timeChangeColor = 1;
+        quantityRepetitions = -1;
+        _isWork = true;
+
+        _defaultText = _text.text;
+        _defaultColor = _text.color;
     }
 
     private void Start()
@@ -30,15 +39,26 @@ public class TextScript : MonoBehaviour
     {
         var waitForDelay = new WaitForSeconds(_delay);
 
-        _text.DOText("Замена", _timeChange);
+        while (_isWork)
+        {
+            yield return waitForDelay;
 
-        yield return waitForDelay;
+            _text.DOText("Замена", _timeChange);
 
-        _text.DOText(" Добавление", _timeChange).SetRelative();
+            yield return waitForDelay;
 
-        yield return waitForDelay;
+            _text.DOText(" Добавление", _timeChange).SetRelative();
 
-        _text.DOColor(Color.red, _timeChangeColor).SetLoops(-1, LoopType.Yoyo);
-        _text.DOText("Текст Взломан", _timeChange, true, ScrambleMode.All);
+            yield return waitForDelay;
+
+            _text.DOColor(Color.red, _timeChangeColor).SetLoops(quantityRepetitions, LoopType.Yoyo);
+            _text.DOText("Текст Взломан", _timeChange, true, ScrambleMode.All);
+
+            yield return waitForDelay;
+
+            DOTween.KillAll();
+            _text.text = _defaultText;
+            _text.color = _defaultColor;
+        }
     }
 }

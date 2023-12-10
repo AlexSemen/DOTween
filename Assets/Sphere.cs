@@ -8,17 +8,16 @@ public class Sphere : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private float _time;
-    private float _speed;
+    private float _distance;
+    private int quantityRepetitions;
 
-    void Start()
+    private void Start()
     {
-        _time = 1;
-        _speed = 1;
+        _time = 5;
+        _distance = 10;
         _rigidbody = GetComponent<Rigidbody>();
-    }
+        quantityRepetitions = -1;
 
-    void Update()
-    {
-        _rigidbody.DOMoveX(transform.position.x + _speed, _time, false);
+        _rigidbody.DOMoveX(transform.position.x + _distance, _time, false).SetLoops(quantityRepetitions, LoopType.Restart);
     }
 }

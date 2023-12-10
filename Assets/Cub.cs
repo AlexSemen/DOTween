@@ -8,17 +8,16 @@ public class Cub : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private float _time;
-    private float _speed;
+    private float _rotate;
+    private int quantityRepetitions;
 
-    void Start()
+    private void Start()
     {
-        _time = 1; 
-        _speed = 5;
+        _time = 3; 
+        _rotate = 180;
         _rigidbody = GetComponent<Rigidbody>();
-    }
+        quantityRepetitions = -1;
 
-    void Update()
-    {
-        _rigidbody.DORotate(transform.rotation.eulerAngles + Vector3.right * _speed, _time);
+        _rigidbody.DORotate(transform.rotation.eulerAngles + Vector3.right * _rotate, _time).SetLoops(quantityRepetitions, LoopType.Restart);
     }
 }

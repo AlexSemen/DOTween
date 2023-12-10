@@ -362,7 +362,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Capsule.cs"
 "Assets/Cub.cs"
-"Assets/Cub2.cs"
+"Assets/CubThreeChanges.cs"
 "Assets/Cylinder.cs"
 "Assets/Sphere.cs"
 "Assets/TextScript.cs"

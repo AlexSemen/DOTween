@@ -61,10 +61,10 @@
   <ItemGroup>
     <Compile Include="Assets\Cub.cs" />
     <Compile Include="Assets\TextScript.cs" />
-    <Compile Include="Assets\Cub2.cs" />
     <Compile Include="Assets\Sphere.cs" />
     <Compile Include="Assets\Capsule.cs" />
     <Compile Include="Assets\Cylinder.cs" />
+    <Compile Include="Assets\CubThreeChanges.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -6,16 +6,15 @@ using DG.Tweening;
 public class Capsule : MonoBehaviour
 {
     private float _time;
-    private float _speed;
+    private float _scale;
+    private int quantityRepetitions;
 
-    void Start()
+    private void Start()
     {
-        _time = 1;
-        _speed = 1;
-    }
+        _time = 3;
+        _scale = 5;
+        quantityRepetitions = -1;
 
-    void Update()
-    {
-        transform.DOScale(transform.localScale.x + _speed, _time);
+        transform.DOScale(transform.localScale.x + _scale, _time).SetLoops(quantityRepetitions, LoopType.Restart);
     }
 }

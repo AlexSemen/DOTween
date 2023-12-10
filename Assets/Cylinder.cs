@@ -5,17 +5,14 @@ using DG.Tweening;
 
 public class Cylinder : MonoBehaviour
 {
+    private float _time;
+    private int quantityRepetitions;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
+        _time = 5;
+        quantityRepetitions = -1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        GetComponent<MeshRenderer>().material.DOColor(Color.red, 5);
+        GetComponent<MeshRenderer>().material.DOColor(Color.red, _time).SetLoops(quantityRepetitions, LoopType.Restart);
     }
 }
