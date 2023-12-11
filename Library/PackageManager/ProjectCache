@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638369009837991083
-    m_Hash: 2183131250
+      ticks: 638379162063124455
+    m_Hash: 634929756
   m_LockFileStatus:
     m_FilePath: "C:/\u0421\u0430\u0448\u0430/DOTween/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638369009838112105
-    m_Hash: 398415342
+      ticks: 638379162063131701
+    m_Hash: 3884502938
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -2934,10 +2934,12 @@ m_ResolvedPackages:
     - 3.0.24
     - 3.0.25
     - 3.0.26
+    - 3.0.27
     compatible:
     - 3.0.25
     - 3.0.26
-    recommended: 3.0.26
+    - 3.0.27
+    recommended: 3.0.27
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
